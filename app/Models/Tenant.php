@@ -7,7 +7,14 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Tenant extends Model
 {
-    protected $fillable = ['name', 'domain', 'api_key'];
+    protected $fillable = [
+        'name',
+        'domain',
+        'api_token',
+        'owner_email',
+        'plan',
+        'status',
+    ];
 
     public function forms(): HasMany
     {
