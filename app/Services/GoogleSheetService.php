@@ -24,7 +24,7 @@ class GoogleSheetService
 
     public function appendRow(array $row)
     {
-        $range = 'Sheet1!A:E'; // adjust based on your sheet layout
+        $range = 'Sheet1!A:AA'; // adjust based on your sheet layout
         $body = new \Google\Service\Sheets\ValueRange([
             'values' => [$row]
         ]);

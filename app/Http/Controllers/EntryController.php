@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Form;
+use App\Models\Tenant;
 use Illuminate\Http\Request;
 use App\Models\Entry;
 
@@ -22,5 +24,15 @@ class EntryController extends Controller
             'success' => true,
             'entry' => $entry
         ], 201);
+    }
+
+    public function tenant()
+    {
+        return $this->belongsTo(Tenant::class);
+    }
+
+    public function form()
+    {
+        return $this->belongsTo(Form::class);
     }
 }

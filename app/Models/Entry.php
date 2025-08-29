@@ -14,4 +14,9 @@ class Entry extends Model
         'your-subject',
         'your-message',
     ];
+
+    public function form()
+    {
+        return $this->belongsTo(Form::class);
+    }
 }
